@@ -1,0 +1,6 @@
+server:
+  listen_addr: localhost:3000
+  sentry_dsn: https://key@sentry.example.com/1
+
+client:
+  sentry_dsn: https://key@sentry.example.com/1
