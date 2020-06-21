@@ -1,8 +1,7 @@
 <template>
   <div class="home">
     <Title />
-
-    <router-view name="main"/>
+    <router-view name="main" />
   </div>
 </template>
 

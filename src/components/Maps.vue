@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <div class="title">
+      Select the map
+    </div>
     <div v-for="map in maps" :key="map.name">
       <button>{{ map.name }}</button>
     </div>
@@ -17,3 +20,9 @@ export default class Maps extends Vue {
   private readonly maps!: Map[];
 }
 </script>
+
+<style scoped lang="scss">
+.title {
+  text-align: center;
+}
+</style>

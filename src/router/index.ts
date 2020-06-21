@@ -2,19 +2,30 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home.vue";
 import Maps from "@/components/Maps.vue";
+import Agents from "@/components/Agents.vue";
+import { Routes } from "@/types/RouteName";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
+    redirect: {name: Routes.maps}
+  },
+    {
+    path: "/home",
     name: "Home",
     component: Home,
     children: [
       {
         path: "/maps",
-        name: "Maps",
-        components: {main: Maps },
+        name: Routes.maps,
+        components: { main: Maps }
+      },
+      {
+        path: "/agents",
+        name: Routes.agents,
+        components: { main: Agents}
       }
     ]
   },
