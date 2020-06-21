@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 const Main = () => (
   <Fragment>
     <Link to="/maps">
-      <Text center>
-        Click to start searching
-      </Text>
+      <button>
+        <Text center>
+          Click to start searching
+        </Text>
+      </button>
     </Link>
   </Fragment>
 );

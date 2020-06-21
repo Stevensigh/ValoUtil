@@ -8,14 +8,14 @@ export default class Maps extends Component {
 
   render() {
     const mapList = MAPS.map((val) => (
-      <div>
+      <button >
         { val }
-      </div>
+      </button>
     ));
     return (
-      <button onClick={this.onClickEvt}>
+      <div>
         {mapList}
-      </button>
+      </div>
     );
   }
 }

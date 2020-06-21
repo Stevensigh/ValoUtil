@@ -9,7 +9,7 @@ const Root = () => (
   <>
     <Title />
     <Switch>
-      <Route path="/" component={MainContainer} />
+      <Route exact path="/" component={MainContainer} />
       <Route path="/agents" component={AgentsContainer} />
       <Route path="/maps" component={MapsContainer} />
       <Redirect from="*" to="/" />
