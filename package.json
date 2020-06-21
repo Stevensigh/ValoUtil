@@ -1,7 +1,7 @@
 {
-  "name": "web-boilerplate",
+  "name": "valo-util",
   "version": "1.0.0",
-  "description": "Web application boilerplate",
+  "description": "Valo utility lineups",
   "bin": "dist/server/index.js",
   "scripts": {
     "clean": "rm -rf dist/",
@@ -20,17 +20,18 @@
     "serve": "node dist/server",
     "dev": "concurrently --kill-others --prefix name --prefix-colors cyan.bold,magenta.bold --names HTTP,JS 'npm run start:server:watch' 'npm run build:client:watch'",
     "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "cover": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.kevinlin.info/personal/web-boilerplate.git"
+    "url": "https://github.com/Stevensigh/ValoUtil.git"
   },
-  "author": "Kevin Lin <developer@kevinlin.info>",
+  "author": "",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
   "pre-commit": [
     "lint",
     "test"

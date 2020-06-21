@@ -1,14 +1,17 @@
 import React from 'react';
-import Favicon from 'react-favicon';
 import { Redirect, Route, Switch } from 'react-router';
-import ExampleContainer from 'client/app/react/containers/example';
+import AgentsContainer from 'client/app/react/containers/agents';
+import MapsContainer from 'client/app/react/containers/maps';
+import MainContainer from 'client/app/react/containers/main';
+import Title from 'client/app/react/components/title';
 
 const Root = () => (
   <>
-    <Favicon />
-
+    <Title />
     <Switch>
-      <Route path="/" component={ExampleContainer} />
+      <Route path="/" component={MainContainer} />
+      <Route path="/agents" component={AgentsContainer} />
+      <Route path="/maps" component={MapsContainer} />
       <Redirect from="*" to="/" />
     </Switch>
   </>
