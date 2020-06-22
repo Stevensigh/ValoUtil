@@ -4,4 +4,5 @@ export enum Routes {
     maps = "maps",
     side = "side",
     skills = "skills",
+    result = "result",
 };

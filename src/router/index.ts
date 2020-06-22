@@ -5,6 +5,7 @@ import Sides from "@/components/Sides.vue";
 import Maps from "@/components/Maps.vue";
 import Agents from "@/components/Agents.vue";
 import { Routes } from "@/types/RouteName";
+import Result from "@/components/Result.vue";
 
 Vue.use(VueRouter);
 
@@ -15,7 +16,7 @@ const routes: Array<RouteConfig> = [
   },
     {
     path: "/home",
-    name: "Home",
+    name: Routes.home,
     component: Home,
     children: [
       {
@@ -32,6 +33,11 @@ const routes: Array<RouteConfig> = [
         path: "/sides",
         name: Routes.side,
         components: {main: Sides}
+      },
+      {
+        path: "/result",
+        name: Routes.result,
+        components: {main: Result}
       }
     ]
   },
