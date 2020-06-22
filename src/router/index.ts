@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home.vue";
+import Sides from "@/components/Sides.vue";
 import Maps from "@/components/Maps.vue";
 import Agents from "@/components/Agents.vue";
 import { Routes } from "@/types/RouteName";
@@ -26,6 +27,11 @@ const routes: Array<RouteConfig> = [
         path: "/agents",
         name: Routes.agents,
         components: { main: Agents}
+      },
+      {
+        path: "/sides",
+        name: Routes.side,
+        components: {main: Sides}
       }
     ]
   },

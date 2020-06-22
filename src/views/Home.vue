@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <Title />
-    <router-view name="main" />
+    <Selection />
+    <div class="routes">
+      <router-view name="main" />
+    </div>
   </div>
 </template>
 
@@ -9,6 +12,12 @@
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import Title from "@/components/Title.vue";
-@Component({ components: { Title } })
+import Selection from "@/components/Selection.vue";
+@Component({ components: { Title, Selection } })
 export default class Home extends Vue {}
 </script>
+<style lang="scss">
+.routes {
+  padding-top: 10%;
+}
+</style>

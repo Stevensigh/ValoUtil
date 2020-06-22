@@ -1,3 +1,5 @@
+import { MapType } from "@/types/MapType";
+
 export interface Map {
-    name: string;
+    name: MapType;
 }
